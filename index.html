@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>نموذج ضم المناديب - مؤسسة جياد الخير للخدمات اللوجستية</title>
+<style>
+  *{margin:0; padding:0; box-sizing:border-box;}
+  html, body{height:100%; overflow:hidden; background:#F5F7F5;}
+
+  #loader{
+    position:fixed; inset:0;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    background:#F5F7F5;
+    font-family:'IBM Plex Sans Arabic', Tahoma, Arial, sans-serif;
+    z-index:10;
+    transition:opacity .4s ease;
+  }
+  #loader.hidden{opacity:0; pointer-events:none;}
+  .spinner{
+    width:40px; height:40px;
+    border:4px solid #DEE5E2;
+    border-top-color:#0F3D3E;
+    border-radius:50%;
+    animation:spin 0.8s linear infinite;
+    margin-bottom:16px;
+  }
+  @keyframes spin{ to{ transform:rotate(360deg); } }
+  #loader p{color:#66766F; font-size:14px;}
+
+  iframe{
+    position:fixed; inset:0;
+    width:100%; height:100%;
+    border:none;
+  }
+</style>
+</head>
+<body>
+
+<div id="loader">
+  <div class="spinner"></div>
+  <p>جاري تحميل النموذج...</p>
+</div>
+
+<iframe
+  src="https://script.google.com/macros/s/AKfycbw7HNAdeXAb-vqpCtSAyMhUeJ1YX5_o1VP5O0iylooQ-xsZA9_fmuiQnc_qlrjZK3rH8Q/exec"
+  title="نموذج ضم المناديب"
+  onload="document.getElementById('loader').classList.add('hidden')"
+  allow="clipboard-write"
+></iframe>
+
+</body>
+</html>
